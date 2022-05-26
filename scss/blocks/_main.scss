@@ -1,4 +1,9 @@
 .pokemon-main {
+    .pokemon-img {
+        position: absolute;
+        top: 50px;
+        right: 150px;
+    }
     .form {
         gap: 40px;
         .form__select, .form__select__letters, .form__control, .btn {
@@ -14,6 +19,9 @@
             line-height: 28px;
             color: #000000;
         }
+        .form__control::placeholder {
+            color: #000000;
+        }
         .btn {
             width: 200px;
         }
@@ -23,7 +31,7 @@
     }
     .pokemon-list-item {
         width: 307px;
-        padding: 30px;
+        gap: 20px;
         background: #FFFFFF;
         border: 2px solid #000000;
         border-radius: 20px;
@@ -35,6 +43,7 @@
         .pokemon-name {
             font-family: 'Roboto';
             font-style: normal;
+            margin-left: 30px;
             font-weight: 700;
             font-size: 24px;
             line-height: 28px;
@@ -43,6 +52,7 @@
         .pokemon-title {
             font-family: 'Roboto';
             font-style: normal;
+            margin-left: 30px;
             font-weight: 500;
             font-size: 20px;
             line-height: 23px;
@@ -55,6 +65,9 @@
             font-size: 24px;
             line-height: 28px;
             color: #000000;
+        }
+        .pokemon-weight {
+            margin-left: 30px;
         }
         .pokemon-name {
             margin-right: 30% !important;

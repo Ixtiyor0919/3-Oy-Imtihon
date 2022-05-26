@@ -1,40 +1,3 @@
-///1-Masala
-
-// const userNumbers = []
-
-// function sumInput(numbers) {
-//     var sum = 0;
-//     var userSon = Number(prompt(`Sonlar kiriting:`));
-
-//     if(sumInput < 0 || isNaN(sumInput)) {
-//         userNumbers.push(userSon)
-//         prompt += userSon
-//     }else {
-//         var userSon = alert(prompt(`son kiriting:`));
-//     }
-//     for (let i = 0; i < userNumbers.length; i++) {
-//         sum += numbers[i]
-//     }
-//     return sum
-    
-// }
-// alert(sumInput([]))
-// console.log(userNumbers);
-
-//2-Masala
-// var salaries = {
-// 	"Akmal": 1200,
-// 	"Salim": 5200,
-// 	"Karima": 1800
-// }
-// function sumSalaries (salaries) {
-//     return salaries = Akmal + Salim + Karima
-// }
-
-// console.log((salaries)) // Natija: 8200 -> chiqishi kk
-
-
-
 //Amaliy ish
 var elBox = document.createElement('div')
 elBox.classList.add('container', 'pokemon-main', 'pb-5')
@@ -42,6 +5,12 @@ elBox.classList.add('container', 'pokemon-main', 'pb-5')
 var mainImg = document.createElement('img')
 mainImg.classList.add('m-auto', 'd-block', 'mt-5', 'mb-5')
 mainImg.setAttribute('src', '../images/main-img.png')
+
+var pokemonImg = document.createElement('img')
+pokemonImg.classList.add('m-auto', 'd-inline-block', 'pokemon-img')
+pokemonImg.setAttribute('src', '../images/pokemon-img.svg')
+pokemonImg.setAttribute('width', '50');
+pokemonImg.setAttribute('height', '50');
 
 var elForm = document.createElement('form');
 elForm.classList.add('class', 'form', 'd-flex', 'w-100', 'mb-5', 'justify-content-center', 'pb-5')
@@ -72,7 +41,7 @@ elList.classList.add('pokemon-list', 'd-flex', 'list-unstyled', 'flex-wrap', 'ju
 
 for(var i = 0; i < pokemons.length; i++) {
 	elLi = document.createElement('li');
-	elLi.classList.add('pokemon-list-item', 'card-header')
+	elLi.classList.add('pokemon-list-item')
 
 	elLine = document.createElement('hr');
 	elLine.classList.add('card-line')
@@ -93,7 +62,7 @@ for(var i = 0; i < pokemons.length; i++) {
 
 	var elIcon = document.createElement('img');
 	elIcon.setAttribute('src', pokemons[i].icon);
-	elIcon.classList.add('icon', 'd-inline-block')
+	elIcon.classList.add('icon', 'ms-auto', 'd-inline-grid')
 	elIcon.setAttribute('width', '30')
 	elIcon.setAttribute('height', '30')
 
@@ -115,6 +84,7 @@ for(var i = 0; i < pokemons.length; i++) {
 	elList.appendChild(elLi);
 
 	elBox.appendChild(mainImg);
+	elBox.appendChild(pokemonImg);
 	elSelect.appendChild(elSelectOption)
 	elSelectLetters.appendChild(elSelectLettersOption)
 	elForm.appendChild(elSelect);
